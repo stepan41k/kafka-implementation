@@ -12,7 +12,7 @@ func main() {
 	reader := kafka.NewReader(kafka.ReaderConfig{
 		Brokers: []string{"localhost:9092"},
 		Topic:   "my-topic",
-		GroupID: "my-group", // Группа нужна для отслеживания прочитанных сообщений
+		GroupID: "my-group",
 	})
 
 	defer reader.Close()
